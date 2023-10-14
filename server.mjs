@@ -29,9 +29,9 @@ app.use(morgan('combined'));
 
 
 // root path
-// app.get("/", (req, res) => {
-//     res.send("Chatbot response");
-// });
+app.get("/", (req, res) => {
+    res.send("Chatbot response");
+});
 
 
 // Dialogflow cx webhook
@@ -92,6 +92,9 @@ app.use("/webhook", (req, res, next) => {
     })
   })
 
+// app.use("/webhook", (req, res, next) => {
+//   console.log("req.body: ",req.body);
+// })
 
 
 // ports details
